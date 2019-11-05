@@ -25,7 +25,7 @@ same application which you push live.
 
 ## Remote Control
 
-[_Remote Control_](https://www.seleniumhq.org/docs/05_selenium_rc.jsp)
+_[Remote Control]({{< ref "/legacy_docs/selenium_rc.ja.md" >}})_
 is also known as Selenium 1.
 Selenium RC was the most prominent Selenium tool
 before the advent of Selenium WebDriver. Selenium RC would use a
@@ -35,7 +35,7 @@ you could never be sure if what you were testing was the same as
 the application you wanted to push live. Selenium 2 APIs yet contain Selenium RC APIs but
 Selenium 3 would completely get rid of Selenium RC APIs. If you are
 still using Selenium RC then you must
-[_migrate_](https://www.seleniumhq.org/docs/03_webdriver.jsp#migrating-from-selenium-1-0)
+[_migrate_]({{< ref "/legacy_docs/migrating_from_rc_to_webdriver.ja.md" >}})
 to Selenium WebDriver.
 
 
