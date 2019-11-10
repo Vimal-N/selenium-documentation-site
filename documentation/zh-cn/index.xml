@@ -149,8 +149,8 @@ python setup.py install C# 可以使用 NuGet 安装 C# 的 Selenium 库：</des
       <guid>https://selenium.dev/documentation/zh-cn/getting_started/quick/</guid>
       <description>Selenium 不仅仅是一个工具或 API，它还包含许多工具。
 WebDriver WebDriver 也被称为 Selenium 2。 如果您开始使用桌面网站测试自动化，那么您将使用 WebDriver APIs。 WebDriver 使用浏览器供应商提供的浏览器自动化 API 来控制浏览器和运行测试。 这就像真正的用户正在操作浏览器一样。 由于 WebDriver 不要求使用应用程序代码编译其 API，因此它本质上不具有侵入性。 因此，您测试的应用程序与实时推送的应用程序相同。
-Remote Control Remote Control 也被称为 Selenium 1。 Selenium RC 是 Selenium WebDriver 出现之前最突出的 Selenium 工具。 Selenium RC 将使用一个代理服务器，并将 JavaScript 注入到浏览器中，以便能够控制它。 考虑到 Selenium RC 在浏览器上的侵入性， 您永远不能确定您测试的应用程序是否与您想要推送的应用程序相同。 Selenium 2 APIs 包含有 Selenium RC APIs， 但是 Selenium 3 会完全摆脱 Selenium RC APIs。 如果您还在使用 Selenium RC，则必须 迁移 到 Selenium WebDriver.
-IDE IDE 是一个 Firefox 插件， 可以用来记录 Firefox 本身的测试步骤。 Selenium IDE 可用于快速生成各种编程语言（C#、Java、Python 和 Ruby）的测试代码。 考虑到通过 Selenium IDE 生成的代码的可维护性，除了熟悉元素定位器或生成丢弃的代码之外， 不推荐将其用于其他任何用途。 我们确信，一旦您习惯了 WebDriver API，您将永远不会使用 Selenium IDE。</description>
+IDE IDE 是一个 Firefox 插件， 可以用来记录 Firefox 本身的测试步骤。 Selenium IDE 可用于快速生成各种编程语言（C#、Java、Python 和 Ruby）的测试代码。 考虑到通过 Selenium IDE 生成的代码的可维护性，除了熟悉元素定位器或生成丢弃的代码之外， 不推荐将其用于其他任何用途。 我们确信，一旦您习惯了 WebDriver API，您将永远不会使用 Selenium IDE。
+Grid 在 WebDriver 测试开发后不久，您可能需要在多个浏览器和操作系统组合上运行测试。 这就是 Grid 应用的地方。</description>
     </item>
     
     <item>
@@ -219,19 +219,6 @@ Java Python C# Ruby JavaScript Kotlin FirefoxOptions options = new FirefoxOption
     </item>
     
     <item>
-      <title>HTML runner</title>
-      <link>https://selenium.dev/documentation/zh-cn/getting_started/html-runner/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/zh-cn/getting_started/html-runner/</guid>
-      <description>Selenium HTML-runner 允许您从命令行运行 Test Suites。 Test Suites 是从 Selenium IDE 或兼容工具导出的 HTML。
-公共信息  geckodriver / firefox / selenium-html-runner 版本的组合很重要。 可能在某个地方有一个软件兼容性矩阵。 selenium-html-runner 只运行 Test Suite（而不是 Test Case —— 例如从 Monitis Transaction Monitor 导出的东西）。一定要遵守这个规定。
- 对于没有 DISPLAY 的 Linux 用户，您需要启动具有 Virtual DISPLAY 的 html-runner （搜索 xvfb）
-  示例 Linux 环境 安装 / 下载以下软件包：
-[user@localhost ~]$ cat /etc/redhat-release CentOS Linux release 7.4.1708 (Core) [user@localhost ~]$ rpm -qa | egrep -i &amp;#34;xvfb|java-1.</description>
-    </item>
-    
-    <item>
       <title>Migrating from RC to WebDriver</title>
       <link>https://selenium.dev/documentation/zh-cn/legacy_docs/migrating_from_rc_to_webdriver/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -248,8 +235,7 @@ Java Python C# Ruby JavaScript Kotlin FirefoxOptions options = new FirefoxOption
       
       <guid>https://selenium.dev/documentation/zh-cn/remote_webdriver/remote_webdriver_client/</guid>
       <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- First, we need to connect to the RemoteWebDriver. We do this by pointing the URL to the address of the server running our tests. In order to customize our configuration, we set desired capabilities. Below is an example of instantiating a remote WebDriver object pointing to our remote web server, www.example.com, running our tests on Firefox.
-Java Python C# Ruby JavaScript Kotlin FirefoxOptions firefoxOptions = new FirefoxOptions(); WebDriver driver = new RemoteWebDriver(new URL(&amp;#34;http://www.</description>
+ To run a remote WebDriver client, we first need to connect to the RemoteWebDriver. We do this by pointing the URL to the address of the server running our tests. In order to customize our configuration, we set desired capabilities. Below is an example of instantiating a remote WebDriver object pointing to our remote web server, www.example.com, running our tests on Firefox.</description>
     </item>
     
     <item>
@@ -336,6 +322,19 @@ Selenium 允许您在多个操作系统上的多个浏览器上运行相同的�
     </item>
     
     <item>
+      <title>HTML runner</title>
+      <link>https://selenium.dev/documentation/zh-cn/legacy_docs/html-runner/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/zh-cn/legacy_docs/html-runner/</guid>
+      <description>Selenium HTML-runner 允许您从命令行运行 Test Suites。 Test Suites 是从 Selenium IDE 或兼容工具导出的 HTML。
+公共信息  geckodriver / firefox / selenium-html-runner 版本的组合很重要。 可能在某个地方有一个软件兼容性矩阵。 selenium-html-runner 只运行 Test Suite（而不是 Test Case —— 例如从 Monitis Transaction Monitor 导出的东西）。一定要遵守这个规定。
+ 对于没有 DISPLAY 的 Linux 用户，您需要启动具有 Virtual DISPLAY 的 html-runner （搜索 xvfb）
+  示例 Linux 环境 安装 / 下载以下软件包：
+[user@localhost ~]$ cat /etc/redhat-release CentOS Linux release 7.4.1708 (Core) [user@localhost ~]$ rpm -qa | egrep -i &amp;#34;xvfb|java-1.</description>
+    </item>
+    
+    <item>
       <title>HTTP response codes</title>
       <link>https://selenium.dev/documentation/zh-cn/worst_practices/http_response_codes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -387,7 +386,7 @@ For web applications, the automation of this testing can be done directly with S
       <guid>https://selenium.dev/documentation/zh-cn/support_packages/working_with_select_elements/</guid>
       <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
  Select elements can require quite a bit of boiler plate code to automate. To reduce this and make your tests cleaner, there is a Select class in the Selenium support package. To use it, you will need the following import statement:
-Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.ui.Select;   from selenium.webdriver.support.select import Select   // We don&amp;#39;t have a C# code sample yet - Help us out and raise a PR    include Selenium::WebDriver::Support   // We don&amp;#39;t have a JavaScript code sample yet - Help us out and raise a PR    import org.</description>
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.ui.Select;   from selenium.webdriver.support.select import Select   using OpenQA.Selenium.Support.UI   include Selenium::WebDriver::Support   // We don&amp;#39;t have a JavaScript code sample yet - Help us out and raise a PR    import org.</description>
     </item>
     
     <item>
@@ -461,7 +460,7 @@ From experience, most intermittents that arise from use of Selenium and WebDrive
       
       <guid>https://selenium.dev/documentation/zh-cn/introduction/about_this_documentation/</guid>
       <description>这些文档，就像代码本身一样，100% 由 Selenium 社区中的志愿者维护。 许多人自成立以来一直在使用它，但更多人只是在短时间内使用它，并且已经花时间帮助改善新用户的入门体验。
-如果文档有问题，我们想知道！ 沟通问题的最佳方式是访问 https://github.com/seleniumhq/docs/issues 并搜索问题是否已经提交。 如果没有，请随意打开一个！
+如果文档有问题，我们想知道！ 沟通问题的最佳方式是访问 https://github.com/seleniumhq/seleniumhq.github.io/issues 并搜索问题是否已经提交。 如果没有，请随意打开一个！
 社区的许多成员经常光顾 irc.freenode.net 的 #selenium IRC 频道。 请随时来访并提出问题，如果您得到了您认为在这些文档中可能有用的帮助，请务必添加您的贡献！ 我们可以更新这些文档，但当我们从普通提交者之外获得贡献时，对每个人来说都容易得多。</description>
     </item>
     
@@ -637,17 +636,9 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/contributing/</guid>
-      <description>Selenium 是一个大型软件项目，文档是了解事物如何运作和学习有效利用其潜力的关键。
-新的文档是一个从头开始重写 Selenium 项目的文档。这是一项正在进行的工作（不针对任何特定的发行版），目的是提供一个关于如何有效使用 Selenium 的更新手册。我们希望带回来一些有意义的旧文档。
-对新文档的贡献遵循以下关于贡献的部分中描述的过程。 您应该花一些时间通过阅读 更多相关信息 来熟悉文档。
-Selenium 项目欢迎来自每个人的贡献。有很多方法可以帮助您：
-报告问题 在报告新问题或评论现有问题时，请确保讨论涉及使用 Selenium 软件或其文档的具体技术问题。
-所有 Selenium 组件随着时间的推移变化非常快，因此这可能导致文档过时。 如果您发现情况确实如此，就像上面提到的那样，不要怀疑要为此创建一个问题。 您也可能知道如何更新文档，因此请向我们发送带有相关更改的请求。
-如果您不确定您发现的是否有问题， 请先向 selenium-users@ mailing list 咨询， 或者加入我们在 irc.freenode.org 或 Slack 的 #selenium 频道。
-贡献 Selenium 项目欢迎新的贡献者。 随着时间的推移，作出重要和有价值贡献的个人成为提交者，并获得对项目的提交访问权。
-本文将指导您完成贡献流程。
-Step 1: Fork 在 Github 上 Fork 项目，并在本地检查您的副本。
-% git clone git@github.com:username/docs.git % cd docs % git remote add upstream git://github.com/seleniumhq/docs.git 依赖关系：Hugo 文档使用 Hugo 来建立和渲染网站。 要在执行任何更改之前在本地验证所有内容，请 安装 Hugo 并 运行本地服务器 以在本地呈现站点。</description>
+      <description>Page being translated from English to Chinese. Do you speak Chinese? Help us to translate it by sending us pull requests!
+ Selenium is a big software project, its site and documentation are key to understanding how things work and learning effective ways to exploit its potential.
+This project contains both Selenium&amp;rsquo;s site and documentation. This is an ongoing effort (not targeted at any specific release) to provide updated information on how to use Selenium effectively, how to get involved and how to contribute to Selenium.</description>
     </item>
     
   </channel>
